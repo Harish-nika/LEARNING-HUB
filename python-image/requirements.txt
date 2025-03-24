@@ -1,9 +1,0 @@
-pymupdf
-pandas
-pytesseract
-langdetect
-icecream
-pillow
-multiprocessing-logging
-openpyxl
-
