@@ -8,10 +8,8 @@ WORKDIR /app
 COPY . .
 
 # Install dependencies
-# Upgrade pip before installing dependencies
-RUN python -m pip install --upgrade pip && \
-    pip install --no-cache-dir -r backend/requirements.txt && \
-    pip install --no-cache-dir -r frontend/requirements.txt
+RUN pip install --no-cache-dir -r backend/requirements.txt
+RUN pip install --no-cache-dir -r frontend/requirements.txt
 
 # Install Ollama
 RUN curl -fsSL https://ollama.com/install.sh | sh
