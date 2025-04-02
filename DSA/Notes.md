@@ -1,3 +1,8 @@
 ![BIG O notations](image.png)
 ![Top DS](image-1.png)
+![List vs Linked List](image-3.png)
+![Hashmap/dictionaries](image-4.png)
+![Stack](image-5.png)
+![Queue](image-6.png)
+![Trees](image-7.png)
 ![Top Algo](image-2.png)
