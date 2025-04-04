@@ -1,0 +1,32 @@
+base_model: mistralai/Mistral-7B-Instruct-v0.2
+model_type: MistralForCausalLM
+tokenizer_type: AutoTokenizer
+
+load_in_4bit: true
+bnb_4bit_compute_dtype: float16
+
+datasets:
+  - path: /home/harish/Project_works/zResearch/bond-extractor/labeled/train_bonds.jsonl
+    type: alpaca
+
+dataset_prepared_path: ./bond_prepared_data
+
+val_set_size: 0.05
+output_dir: /home/harish/Project_works/zResearch/bond-extractor/output/fd-bond-model
+
+num_epochs: 3
+micro_batch_size: 4
+gradient_accumulation_steps: 4
+cutoff_len: 2048
+lr_scheduler: cosine
+learning_rate: 2e-5
+lora_r: 64
+lora_alpha: 16
+lora_dropout: 0.05
+train_on_inputs: true
+group_by_length: true
+bf16: true
+logging_steps: 10
+save_steps: 200
+eval_steps: 200
+save_total_limit: 3
